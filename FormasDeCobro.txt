@@ -1,0 +1,21 @@
+// Formas de Cobro
+
+/* Decisiones tomadas para objetos Formas de Cobro:
+    -efectivo es un objeto porque tiene un comportamiento fijo.
+    -Tarjeta fue modelado como clase porque cada cobro con tarjeta tiene un valor distinto de cuotas.
+*/
+
+object efectivo {
+    method agregarRecargo(listaDePrecios) {
+        return 0
+    }
+}
+
+class Tarjeta {
+    const coeficienteFijo // Ejemplo 3, preferentemente predefinido
+    const cuotas // Ejemplo 12
+    
+    method agregarRecargo(listaDePrecios) {
+        return cuotas * coeficienteFijo + listaDePrecios.map({unPrecio -> unPrecio * 0.01}).sum()
+    }
+}

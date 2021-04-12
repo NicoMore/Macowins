@@ -1,0 +1,13 @@
+//Macowins
+
+/* Decisiones tomadas para objeto macowins:
+    -Se considero necesaria su existencia para poder calcular las ventas de un dia en particular y dado que es responsabilidad del local mantener registro de sus ventas.
+*/
+
+object macowins {
+    const ventas = []
+
+    method gananciasDeUnaFecha(fecha) {
+        return ventas.filter({unaVenta -> unaVenta.fecha() == fecha}).map({unaVenta -> unaVenta.valorDeLaVenta()}).sum()
+    }
+}
