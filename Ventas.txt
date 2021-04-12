@@ -1,7 +1,7 @@
 // Ventas
 
 /* Decisiones tomadas para clase Venta:
-    -No es necesario tomar registro de la cantidad de prendas vendidas, ya que se puede "medir" el tamaño de la lista.
+    -No es necesario tomar registro de la cantidad de prendas vendidas, ya que se puede "medir" el tamaño de la lista (a pesar que no lo pide explicitamente, se puede saber cantidad de prendas vendidas).
     -formaDeCobro sera un objeto por los mismos motivos que los estados lo son para las prendas.
     -Se realiza valorDeLaVenta() para facilitar el calculo de las ganancias en un determinado dia para el objeto macowins.
 */
@@ -15,5 +15,9 @@ class Venta {
     method valorDeLaVenta() {
         const preciosDePrendas = prendasVendidas.map({unaPrenda -> unaPrenda.precio()})
         return preciosDePrendas.sum() + formaDeCobro.agregarRecargo(preciosDePrendas)
+    }
+
+    method cantidadDePrendasVendidas() {
+        return prendasVendidas.size()
     }
 }
