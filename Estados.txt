@@ -1,21 +1,31 @@
 // Estados de prenda
 
-object nueva {
-    method precioModificado(precio) {
-        return precio
-    }
+/* Decisiones tomadas para los objetos Estados:
+    -A pesar de ser polimorficos, heredan de EstadoDePrenda para mayor claridad y posibles futuros cambios
+    -valorFijo es property para poder ser cambiado directamente, ya que el precio lo elige el usuario (posible error: si el usuario no 
+    ingresa un numero, puede romper el metodo precioModificado() dependiendo del lenguaje utilizado).
+*/
+
+class EstadoDePrenda {
+    abstract method precioModificado()
 }
 
-object promocion {
-    var property valorFijo
+object nueva inherits EstadoDePrenda {
+    override method precioModificado(precio) {
+        return precio
+    }
+}-
 
-    method precioModificado(precio) {
+object promocion inherits EstadoDePrenda {
+    var property valorFijo // Ejemplo 200.0
+
+    override method precioModificado(precio) {
         return precio - valorFijo
     }
 }
 
-object nueva {
-    method precioModificado(precio) {
+object nueva inherits EstadoDePrenda {
+    override method precioModificado(precio) {
         return precio * 0.5
     }
 }

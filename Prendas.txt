@@ -1,5 +1,13 @@
 // Prendas
 
+/* Decisiones tomadas para clase Prenda:
+    -El tipo fue considerado constante, porque una prenda no cambia de tipo, y modelado como string
+    ya que, al no cambiar ningun metodo de Prenda en base a que tipo de prenda es, no es necesario que sea un objeto o una herencia de Prenda
+    -Por la razon contraria a la planteada en el item anterior, el estado fue modelado como un objeto aparte, ya que tiene impacto
+    directo en el precio de la prenda.
+    -El precio fue modelado como float, para considerar centavos.
+*/
+
 class Prenda {
     const tipo // Ejemplo "Saco"
     var estado // Ejemplo nueva
