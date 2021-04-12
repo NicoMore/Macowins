@@ -1,0 +1,15 @@
+// Prendas
+
+class Prenda {
+    const tipo // Ejemplo "Saco"
+    var estado // Ejemplo nueva
+    var precio // Ejemplo 1000.0
+
+    method tipoDePrenda() {
+        return tipo
+    }
+
+    method precio() {
+        return estado.precioModificado(precio)
+    }
+}

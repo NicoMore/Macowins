@@ -1,0 +1,21 @@
+// Estados de prenda
+
+object nueva {
+    method precioModificado(precio) {
+        return precio
+    }
+}
+
+object promocion {
+    var property valorFijo
+
+    method precioModificado(precio) {
+        return precio - valorFijo
+    }
+}
+
+object nueva {
+    method precioModificado(precio) {
+        return precio * 0.5
+    }
+}
