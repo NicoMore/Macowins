@@ -1,0 +1,11 @@
+Requerimientos:
+-Saber precio de venta de una prenda.
+-Saber el tipo de una prenda.
+-Saber ganancias de un dia en particular.
+
+Condiciones al modelado:
+-Tipos de prenda: sacos, pantalones y camisas.
+-Precio depende de estado.
+    -Estados posibles: nueva, promocion y liquidacion.
+-Venta tiene asociada prendas, cantidad y fecha.
+    -Precio varia, al usar tarjeta, si se paga en cuotas.
